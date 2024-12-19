@@ -7,7 +7,7 @@ def calculador_subconjunto_soma(i, n, _conjunto, soma_alvo, subconjunto):
     # Se soma_alvo é zero, então existe um subconjunto válido
     if soma_alvo == 0:
         # Imprime o subconjunto válido
-        flag = True
+        flag = True # flag é atualizado para True e a função retorna, interrompendo a recursão
         print("[", end=" ")
         for elemento in subconjunto:
             print(elemento, end=" ")
@@ -15,7 +15,7 @@ def calculador_subconjunto_soma(i, n, _conjunto, soma_alvo, subconjunto):
         return
 
     if i == n:
-        # Retorna se atingirmos o final do conjunto
+        # Se i atingir n, isso significa que todos os elementos foram considerados. A função retorna sem fazer nada.
         return
 
     # Não considerando o elemento atual
